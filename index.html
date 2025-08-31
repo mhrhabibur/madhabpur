@@ -1,166 +1,135 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-<title>মাধবপুর</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial;
-  padding: 10px;
-  background: #f1f1f1;
-}
-
-/* Header/Blog Title */
-.header {
-  padding: 30px;
-  text-align: center;
-  background: white;
-}
-
-.header h1 {
-  font-size: 50px;
-}
-
-/* Style the top navigation bar */
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
-
-/* Style the topnav links */
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* Change color on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Create two unequal columns that floats next to each other */
-/* Left column */
-.leftcolumn {   
-  float: left;
-  width: 75%;
-}
-
-/* Right column */
-.rightcolumn {
-  float: left;
-  width: 25%;
-  background-color: #f1f1f1;
-  padding-left: 20px;
-}
-
-/* Fake image */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
-
-/* Add a card effect for articles */
-.card {
-  background-color: white;
-  padding: 20px;
-  margin-top: 20px;
-}
-
-/* Clear floats after the columns */
-.row::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-  margin-top: 20px;
-}
-
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {   
-    width: 100%;
-    padding: 0;
-  }
-}
-
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  .topnav a {
-    float: none;
-    width: 100%;
-  }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Awesome Website</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .navbar {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 0 1rem;
+        }
+        .hero {
+            background-image: url('images/sun_flower.jpeg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+        .section {
+            padding: 2rem;
+            text-align: center;
+        }
+        .section-dark {
+            background-color: #333;
+            color: white;
+        }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .project-card {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .project-card-content {
+            padding: 1rem;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+    </style>
 </head>
 <body>
 
-<div class="header">
-  <h1>মাধবপুর </h1>
-</div>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="organization.html">Organization</a>
+    </div>
 
-<div class="topnav">
-   <a href="index.html">হোম</a>
-    <a href="organization.html">প্রতিষ্ঠান সমূহ</a>
-      <a href="projects.html">প্রোজেক্ট</a>
-      <a href="gallery.html">গ্যালারি</a>
-     <a href="about.html">যোগাযোগ</a>
-</div>
+    <div class="hero">
+        <div>
+            <h1>Welcome to My Awesome Website</h1>
+            <p>A showcase of my work and passions.</p>
+        </div>
+    </div>
 
-<div class="row">
-  <div class="leftcolumn">
-    <div class="card">
-      <h2> কাজ চলমান </h2>
-      <h5>Title description, April 13, 2025</h5>
-      
-      <img class="fakeimg" src="images/under_construction.jpg" style="height:600px;" alt="Sun Flower">
-      <p>অপেক্ষা করুন </p>
-      <p> </p>
+    <div id="about" class="section">
+        <h2>About Me</h2>
+        <p>I am a passionate creator, and this is my space to share my work with the world.</p>
     </div>
-    
-  </div>
-  <div class="rightcolumn">
-    <div class="card">
-      <h2>আমাদের গ্রাম </h2>
-      <div class="fakeimg" style="height:100px;">Image</div>
-      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-    </div>
-    <div class="card">
-      <h3>জনপ্রিয় পোস্ট</h3>
-      <div class="fakeimg"><p>Image</p></div>
-      <div class="fakeimg"><p>Image</p></div>
-      <div class="fakeimg"><p>Image</p></div>
-    </div>
-    <div class="card">
-      <h3>আমাদের ফলো করুন </h3>
-       <a href="https://www.facebook.com">Facebook</a>
-      
-    </div>
-  </div>
-</div>
 
-<div class="footer">
-  <h2>Footer</h2>
-</div>
+    <div id="projects" class="section section-dark">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <img src="images/farm.png" alt="Project 1">
+                <div class="project-card-content">
+                    <h3>Project One</h3>
+                    <p>A brief description of the first project.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="images/grave.jpeg" alt="Project 2">
+                <div class="project-card-content">
+                    <h3>Project Two</h3>
+                    <p>A brief description of the second project.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="images/under_construction.jpg" alt="Project 3">
+                <div class="project-card-content">
+                    <h3>Project Three</h3>
+                    <p>A brief description of the third project.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="section">
+        <h2>Get In Touch</h2>
+        <p>You can reach me at myemail@example.com</p>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 My Awesome Website</p>
+    </div>
 
 </body>
 </html>
-
-

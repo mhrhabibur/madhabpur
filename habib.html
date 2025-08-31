@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<title>প্রতিষ্ঠান | মাধবপুর</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: white;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+/* Top navigation bar */
+
+/* Layout columns */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Card effect */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>মাধবপুর </h1>
+</div>
+
+<div class="topnav" id="navbar">
+  <a href="index.html" class="tablink">হোম</a>
+  <a href="organization.html" class="tablink">প্রতিষ্ঠান সমূহ</a>
+  <a href="projects.html" class="tablink">প্রোজেক্ট</a>
+  <a href="gallery.html" class="tablink">গ্যালারি</a>
+  <a href="about.html" class="tablink">যোগাযোগ</a>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>কাজ চলমান</h2>
+      <h5>Title description, April 13, 2025</h5>
+      <img class="fakeimg" src="images/under_construction.jpg" style="height:600px;" alt="Under Construction">
+      <p>অপেক্ষা করুন</p>
+    </div>
+  </div>
+  
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>প্রতিষ্ঠান সমূহ</h2>
+      <div class="fakeimg" style="height:100px;">Image</div>
+      <p>কিছু টেক্সট এখানে থাকবে।</p>
+    </div>
+    
+    <div class="card">
+      <h3>জনপ্রিয় পোস্ট</h3>
+      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"><p>Image</p></div>
+    </div>
+    
+    <div class="card">
+      <h3>আমাদের ফলো করুন</h3>
+      <a href="https://www.facebook.com">Facebook</a>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+
+<script>
+// Add 'active' class to the clicked tab
+const tabs = document.querySelectorAll('.tablink');
+tabs.forEach(tab => {
+  tab.addEventListener('click', function() {
+    tabs.forEach(t => t.classList.remove('active')); // Remove active from all
+    this.classList.add('active'); // Add active to clicked tab
+  });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    display: inline-block;
+    background: #eee;
+    margin-right: 5px;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  .tab:focus {
+    outline: none;
+    background: #ff6347;
+    color: white;
+  }
+</style>
+</head>
+<body>
+<div id="tabs">
+  <div class="tab" tabindex="0">Home</div>
+  <div class="tab" tabindex="0">News</div>
+  <div class="tab" tabindex="0">Sports</div>
+  <div class="tab" tabindex="0">Entertainment</div>
+</div>
+
+<script>
+const tabs = document.querySelectorAll('.tab');
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    tab.focus();
+  });
+});
+</script>
+</body>
+</html>
